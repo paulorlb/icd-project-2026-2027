@@ -18,8 +18,4 @@ notebooks/aulas/
 # Generated data and results
 data/processed/*
 !data/processed/.gitkeep
-outputs/figures/*
-!outputs/figures/.gitkeep
-outputs/tables/*
-!outputs/tables/.gitkeep
-outputs/coauthorship*/
+outputs/w*/
