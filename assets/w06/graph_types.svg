@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 670" role="img" aria-labelledby="title description">
+  <title id="title">Six graph types illustrated with small examples</title>
+  <desc id="description">Panels show a simple undirected graph, a directed graph, a weighted graph, a multigraph with parallel edges, a bipartite graph with people and a publication, and a temporal graph in two snapshots. These properties can be combined.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M 0 0 L 10 5.5 L 0 11 Z" fill="#0072b2"/>
+    </marker>
+  </defs>
+  <style>
+    .background { fill: #f7f9fc; }
+    .card { fill: #fff; stroke: #c9d3de; stroke-width: 2; }
+    .heading { font: 700 30px Arial, sans-serif; fill: #172a3a; }
+    .title { font: 700 21px Arial, sans-serif; fill: #172a3a; }
+    .body { font: 16px Arial, sans-serif; fill: #41576b; }
+    .small { font: 15px Arial, sans-serif; fill: #41576b; }
+    .node { fill: #0072b2; stroke: #fff; stroke-width: 3; }
+    .publication { fill: #d55e00; stroke: #fff; stroke-width: 3; }
+    .letter { font: 700 21px Arial, sans-serif; fill: #fff; text-anchor: middle; dominant-baseline: central; }
+    .link { fill: none; stroke: #0072b2; stroke-width: 4; stroke-linecap: round; }
+    .link-light { fill: none; stroke: #7b91a4; stroke-width: 4; stroke-linecap: round; }
+    .weight { font: 700 18px Arial, sans-serif; fill: #a44900; text-anchor: middle; }
+  </style>
+  <rect class="background" width="1200" height="670"/>
+  <text class="heading" x="30" y="50">Graph types describe different choices</text>
+  <text class="body" x="31" y="80">Each panel isolates one property. A real network may combine several of them.</text>
+
+  <g transform="translate(30 120)">
+    <rect class="card" width="360" height="235" rx="16"/>
+    <text class="title" x="22" y="36">Simple, undirected</text>
+    <line class="link" x1="96" y1="120" x2="154" y2="120"/>
+    <line class="link" x1="206" y1="120" x2="264" y2="120"/>
+    <circle class="node" cx="72" cy="120" r="26"/><circle class="node" cx="180" cy="120" r="26"/><circle class="node" cx="288" cy="120" r="26"/>
+    <text class="letter" x="72" y="120">A</text><text class="letter" x="180" y="120">B</text><text class="letter" x="288" y="120">C</text>
+    <text class="body" x="22" y="210">One edge per pair; no arrow.</text>
+  </g>
+
+  <g transform="translate(420 120)">
+    <rect class="card" width="360" height="235" rx="16"/>
+    <text class="title" x="22" y="36">Directed</text>
+    <line class="link" x1="99" y1="120" x2="150" y2="120" marker-end="url(#arrow)"/>
+    <line class="link" x1="207" y1="120" x2="258" y2="120" marker-end="url(#arrow)"/>
+    <circle class="node" cx="72" cy="120" r="26"/><circle class="node" cx="180" cy="120" r="26"/><circle class="node" cx="288" cy="120" r="26"/>
+    <text class="letter" x="72" y="120">A</text><text class="letter" x="180" y="120">B</text><text class="letter" x="288" y="120">C</text>
+    <text class="body" x="22" y="210">The direction A to B matters.</text>
+  </g>
+
+  <g transform="translate(810 120)">
+    <rect class="card" width="360" height="235" rx="16"/>
+    <text class="title" x="22" y="36">Weighted</text>
+    <line class="link" x1="98" y1="120" x2="154" y2="120"/>
+    <line class="link-light" x1="206" y1="120" x2="262" y2="120"/>
+    <circle class="node" cx="72" cy="120" r="26"/><circle class="node" cx="180" cy="120" r="26"/><circle class="node" cx="288" cy="120" r="26"/>
+    <text class="letter" x="72" y="120">A</text><text class="letter" x="180" y="120">B</text><text class="letter" x="288" y="120">C</text>
+    <text class="weight" x="126" y="90">w = 2</text><text class="weight" x="234" y="90">w = 1</text>
+    <text class="body" x="22" y="210">An edge also carries a magnitude.</text>
+  </g>
+
+  <g transform="translate(30 385)">
+    <rect class="card" width="360" height="235" rx="16"/>
+    <text class="title" x="22" y="36">Multigraph</text>
+    <path class="link" d="M 98 115 Q 180 45 262 115"/>
+    <path class="link-light" d="M 98 125 Q 180 195 262 125"/>
+    <circle class="node" cx="72" cy="120" r="26"/><circle class="node" cx="288" cy="120" r="26"/>
+    <text class="letter" x="72" y="120">A</text><text class="letter" x="288" y="120">B</text>
+    <text class="body" x="22" y="210">Parallel edges join the same pair.</text>
+  </g>
+
+  <g transform="translate(420 385)">
+    <rect class="card" width="360" height="235" rx="16"/>
+    <text class="title" x="22" y="36">Bipartite, or two-mode</text>
+    <line class="link" x1="100" y1="92" x2="254" y2="125"/>
+    <line class="link" x1="100" y1="157" x2="254" y2="135"/>
+    <circle class="node" cx="72" cy="88" r="26"/><circle class="node" cx="72" cy="160" r="26"/>
+    <rect class="publication" x="254" y="104" width="55" height="55" rx="8"/>
+    <text class="letter" x="72" y="88">A</text><text class="letter" x="72" y="160">B</text><text class="letter" x="281" y="132">P1</text>
+    <text class="body" x="22" y="210">Links cross between node kinds.</text>
+  </g>
+
+  <g transform="translate(810 385)">
+    <rect class="card" width="360" height="235" rx="16"/>
+    <text class="title" x="22" y="36">Temporal</text>
+    <text class="small" x="39" y="79">time 1</text><text class="small" x="218" y="79">time 2</text>
+    <line class="link" x1="78" y1="132" x2="129" y2="132"/>
+    <line class="link" x1="254" y1="132" x2="306" y2="132"/>
+    <circle class="node" cx="58" cy="132" r="21"/><circle class="node" cx="149" cy="132" r="21"/>
+    <circle class="node" cx="234" cy="132" r="21"/><circle class="node" cx="326" cy="132" r="21"/>
+    <text class="letter" x="58" y="132">A</text><text class="letter" x="149" y="132">B</text>
+    <text class="letter" x="234" y="132">B</text><text class="letter" x="326" y="132">C</text>
+    <text class="body" x="22" y="210">The edge set can change over time.</text>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 565" role="img" aria-labelledby="title description">
+  <title id="title">An edge list, incidence matrix and drawing of the same authorship links</title>
+  <desc id="description">For an illustrative extract with publications P1 and P4, the edge list contains A-P1, B-P1 and E-P4. A three-by-two incidence matrix contains ones in those same cells. A drawing shows the same three links between circular researcher nodes and square publication nodes.</desc>
+  <style>
+    .background { fill: #f7f9fc; }
+    .card { fill: #fff; stroke: #c9d3de; stroke-width: 2; }
+    .heading { font: 700 30px Arial, sans-serif; fill: #172a3a; }
+    .panel { font: 700 22px Arial, sans-serif; fill: #172a3a; }
+    .body { font: 18px Arial, sans-serif; fill: #294155; }
+    .small { font: 16px Arial, sans-serif; fill: #41576b; }
+    .header-cell { fill: #e5f1f8; }
+    .one-cell { fill: #d4ebf8; }
+    .grid { stroke: #c9d3de; stroke-width: 2; }
+    .node { fill: #0072b2; stroke: #fff; stroke-width: 3; }
+    .publication { fill: #d55e00; stroke: #fff; stroke-width: 3; }
+    .letter { font: 700 20px Arial, sans-serif; fill: #fff; text-anchor: middle; dominant-baseline: central; }
+    .link { stroke: #7c91a4; stroke-width: 4; stroke-linecap: round; }
+  </style>
+  <rect class="background" width="1200" height="565"/>
+  <text class="heading" x="26" y="48">Three ways to represent the same bipartite graph</text>
+  <text class="small" x="27" y="78">Illustrative extract: P1 and P4 only; other publications in the fictitious example are omitted here.</text>
+
+  <rect class="card" x="24" y="105" width="350" height="412" rx="17"/>
+  <text class="panel" x="52" y="145">1. Edge list</text>
+  <rect class="header-cell" x="53" y="178" width="290" height="54"/>
+  <text class="body" x="82" y="213">Publication</text><text class="body" x="235" y="213">Researcher</text>
+  <line class="grid" x1="198" y1="178" x2="198" y2="394"/>
+  <line class="grid" x1="53" y1="232" x2="343" y2="232"/>
+  <line class="grid" x1="53" y1="286" x2="343" y2="286"/>
+  <line class="grid" x1="53" y1="340" x2="343" y2="340"/>
+  <line class="grid" x1="53" y1="394" x2="343" y2="394"/>
+  <text class="body" x="95" y="267">P1</text><text class="body" x="271" y="267">A</text>
+  <text class="body" x="95" y="321">P1</text><text class="body" x="271" y="321">B</text>
+  <text class="body" x="95" y="375">P4</text><text class="body" x="271" y="375">E</text>
+  <text class="small" x="52" y="468">One row per authorship link.</text>
+
+  <rect class="card" x="425" y="105" width="350" height="412" rx="17"/>
+  <text class="panel" x="453" y="145">2. Incidence matrix B</text>
+  <rect class="header-cell" x="454" y="178" width="290" height="54"/>
+  <rect class="one-cell" x="550" y="232" width="97" height="54"/>
+  <rect class="one-cell" x="550" y="286" width="97" height="54"/>
+  <rect class="one-cell" x="647" y="340" width="97" height="54"/>
+  <line class="grid" x1="550" y1="178" x2="550" y2="394"/>
+  <line class="grid" x1="647" y1="178" x2="647" y2="394"/>
+  <line class="grid" x1="454" y1="232" x2="744" y2="232"/>
+  <line class="grid" x1="454" y1="286" x2="744" y2="286"/>
+  <line class="grid" x1="454" y1="340" x2="744" y2="340"/>
+  <line class="grid" x1="454" y1="394" x2="744" y2="394"/>
+  <text class="body" x="581" y="213">P1</text><text class="body" x="677" y="213">P4</text>
+  <text class="body" x="493" y="267">A</text><text class="body" x="493" y="321">B</text><text class="body" x="493" y="375">E</text>
+  <text class="body" x="592" y="267">1</text><text class="body" x="690" y="267">0</text>
+  <text class="body" x="592" y="321">1</text><text class="body" x="690" y="321">0</text>
+  <text class="body" x="592" y="375">0</text><text class="body" x="690" y="375">1</text>
+  <text class="small" x="453" y="468">One means that a link exists.</text>
+
+  <rect class="card" x="826" y="105" width="350" height="412" rx="17"/>
+  <text class="panel" x="854" y="145">3. Drawing</text>
+  <text class="small" x="866" y="183">Researchers</text><text class="small" x="1040" y="183">Publications</text>
+  <line class="link" x1="911" y1="245" x2="1090" y2="287"/>
+  <line class="link" x1="911" y1="343" x2="1090" y2="287"/>
+  <line class="link" x1="911" y1="437" x2="1090" y2="437"/>
+  <circle class="node" cx="911" cy="245" r="27"/><circle class="node" cx="911" cy="343" r="27"/><circle class="node" cx="911" cy="437" r="27"/>
+  <rect class="publication" x="1063" y="260" width="54" height="54" rx="8"/>
+  <rect class="publication" x="1063" y="410" width="54" height="54" rx="8"/>
+  <text class="letter" x="911" y="245">A</text><text class="letter" x="911" y="343">B</text><text class="letter" x="911" y="437">E</text>
+  <text class="letter" x="1090" y="287">P1</text><text class="letter" x="1090" y="437">P4</text>
+  <text class="small" x="854" y="487">Positions are chosen for display.</text>
+
+  <text class="small" x="27" y="549">All three panels encode exactly three researcher-publication links. The drawing adds no new observations.</text>
+</svg>

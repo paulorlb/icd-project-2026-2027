@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 550" role="img" aria-labelledby="title description">
+  <title id="title">Nodes, edges, paths, components, degree and density in a simple graph</title>
+  <desc id="description">Five nodes A to E. Edges AB, AC, BC and CD form one component containing A to D; E is an isolate. The path A-C-D is highlighted. The graph has two components, degree of A equal to two, and density four over ten.</desc>
+  <style>
+    .background { fill: #f7f9fc; }
+    .card { fill: #fff; stroke: #c9d3de; stroke-width: 2; }
+    .heading { font: 700 30px Arial, sans-serif; fill: #172a3a; }
+    .subheading { font: 700 21px Arial, sans-serif; fill: #172a3a; }
+    .body { font: 18px Arial, sans-serif; fill: #294155; }
+    .small { font: 16px Arial, sans-serif; fill: #41576b; }
+    .node { fill: #0072b2; stroke: #fff; stroke-width: 3; }
+    .node-a { fill: #d55e00; stroke: #fff; stroke-width: 3; }
+    .node-label { font: 700 22px Arial, sans-serif; fill: #fff; text-anchor: middle; dominant-baseline: central; }
+    .edge { stroke: #7c91a4; stroke-width: 4; stroke-linecap: round; }
+    .path { stroke: #0072b2; stroke-width: 6; stroke-linecap: round; }
+  </style>
+  <rect class="background" width="1100" height="550"/>
+  <text class="heading" x="38" y="47">A graph is a set of nodes and defined relations</text>
+  <text class="small" x="39" y="77">Illustrative undirected, unweighted graph G = (V, E)</text>
+
+  <rect class="card" x="30" y="102" width="650" height="414" rx="18"/>
+  <rect x="60" y="129" width="590" height="272" rx="20" fill="#eff7fc" stroke="#91b9d0" stroke-width="2" stroke-dasharray="9 7"/>
+  <text class="small" x="75" y="155">Component 1</text>
+  <line class="edge" x1="178" y1="248" x2="341" y2="194"/>
+  <line class="edge" x1="341" y1="194" x2="341" y2="328"/>
+  <line class="path" x1="178" y1="248" x2="341" y2="328"/>
+  <line class="path" x1="341" y1="328" x2="551" y2="286"/>
+  <circle class="node-a" cx="178" cy="248" r="30"/>
+  <circle class="node" cx="341" cy="194" r="30"/>
+  <circle class="node" cx="341" cy="328" r="30"/>
+  <circle class="node" cx="551" cy="286" r="30"/>
+  <circle class="node" cx="197" cy="455" r="30"/>
+  <text class="node-label" x="178" y="248">A</text>
+  <text class="node-label" x="341" y="194">B</text>
+  <text class="node-label" x="341" y="328">C</text>
+  <text class="node-label" x="551" y="286">D</text>
+  <text class="node-label" x="197" y="455">E</text>
+  <text class="small" x="247" y="462">Component 2: isolate</text>
+
+  <rect class="card" x="704" y="102" width="365" height="414" rx="18"/>
+  <text class="subheading" x="735" y="146">Read the graph</text>
+  <text class="body" x="735" y="184">Nodes: A, B, C, D, E (5)</text>
+  <text class="body" x="735" y="220">Edges: AB, AC, BC, CD (4)</text>
+  <text class="body" x="735" y="256">Degree of A: 2 neighbours</text>
+  <text class="body" x="735" y="292">Blue path: A - C - D</text>
+  <text class="body" x="735" y="328">Components: 2</text>
+  <text class="body" x="735" y="364">Isolates: 1 (E)</text>
+  <text class="body" x="735" y="400">Possible pairs: 5 x 4 / 2 = 10</text>
+  <text class="body" x="735" y="436">Density: 4 / 10 = 0.40</text>
+  <text class="small" x="735" y="481">The geometry is chosen for display.</text>
+</svg>

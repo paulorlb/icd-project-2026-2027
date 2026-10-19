@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title description">
+  <title id="title">Bipartite authorship graph and its coauthorship projection</title>
+  <desc id="description">The fictitious publications P1 to P4 join researchers A to E through eight authorship links. P1 joins A and B; P2 joins A, B and C; P3 joins C and D; P4 joins E. Projecting onto researchers gives edges AB of weight two, AC, BC and CD of weight one. E remains an isolate.</desc>
+  <style>
+    .background { fill: #f7f9fc; }
+    .card { fill: #fff; stroke: #c9d3de; stroke-width: 2; }
+    .heading { font: 700 30px Arial, sans-serif; fill: #172a3a; }
+    .panel-heading { font: 700 23px Arial, sans-serif; fill: #172a3a; }
+    .small { font: 17px Arial, sans-serif; fill: #41576b; }
+    .footer { font: 700 17px Arial, sans-serif; fill: #294155; }
+    .node { fill: #0072b2; stroke: #fff; stroke-width: 3; }
+    .publication { fill: #d55e00; stroke: #fff; stroke-width: 3; }
+    .letter { font: 700 20px Arial, sans-serif; fill: #fff; text-anchor: middle; dominant-baseline: central; }
+    .link { stroke: #7c91a4; stroke-width: 3; stroke-linecap: round; }
+    .strong-link { stroke: #0072b2; stroke-width: 6; stroke-linecap: round; }
+    .weight { font: 700 17px Arial, sans-serif; fill: #005c90; text-anchor: middle; }
+  </style>
+  <rect class="background" width="1200" height="680"/>
+  <text class="heading" x="27" y="48">From authorship events to researcher pairs</text>
+  <text class="small" x="28" y="79">The same fictitious P1-P4 data used in Section 1</text>
+
+  <rect class="card" x="24" y="105" width="628" height="525" rx="18"/>
+  <text class="panel-heading" x="54" y="146">Two-mode authorship graph</text>
+  <text class="small" x="100" y="185">Researchers</text>
+  <text class="small" x="480" y="185">Publications</text>
+  <line class="link" x1="133" y1="234" x2="517" y2="234"/>
+  <line class="link" x1="133" y1="310" x2="517" y2="234"/>
+  <line class="link" x1="133" y1="234" x2="517" y2="328"/>
+  <line class="link" x1="133" y1="310" x2="517" y2="328"/>
+  <line class="link" x1="133" y1="386" x2="517" y2="328"/>
+  <line class="link" x1="133" y1="386" x2="517" y2="422"/>
+  <line class="link" x1="133" y1="462" x2="517" y2="422"/>
+  <line class="link" x1="133" y1="538" x2="517" y2="516"/>
+  <circle class="node" cx="133" cy="234" r="27"/><circle class="node" cx="133" cy="310" r="27"/>
+  <circle class="node" cx="133" cy="386" r="27"/><circle class="node" cx="133" cy="462" r="27"/><circle class="node" cx="133" cy="538" r="27"/>
+  <text class="letter" x="133" y="234">A</text><text class="letter" x="133" y="310">B</text>
+  <text class="letter" x="133" y="386">C</text><text class="letter" x="133" y="462">D</text><text class="letter" x="133" y="538">E</text>
+  <rect class="publication" x="490" y="207" width="54" height="54" rx="8"/>
+  <rect class="publication" x="490" y="301" width="54" height="54" rx="8"/>
+  <rect class="publication" x="490" y="395" width="54" height="54" rx="8"/>
+  <rect class="publication" x="490" y="489" width="54" height="54" rx="8"/>
+  <text class="letter" x="517" y="234">P1</text><text class="letter" x="517" y="328">P2</text>
+  <text class="letter" x="517" y="422">P3</text><text class="letter" x="517" y="516">P4</text>
+  <text class="footer" x="54" y="605">9 nodes; 8 authorship links</text>
+
+  <rect class="card" x="680" y="105" width="495" height="525" rx="18"/>
+  <text class="panel-heading" x="710" y="146">One-mode coauthorship projection</text>
+  <text class="small" x="711" y="185">One edge per pair; weight = shared publications</text>
+  <line class="strong-link" x1="782" y1="257" x2="1054" y2="257"/>
+  <line class="link" x1="782" y1="257" x2="916" y2="393"/>
+  <line class="link" x1="1054" y1="257" x2="916" y2="393"/>
+  <line class="link" x1="916" y1="393" x2="1054" y2="510"/>
+  <text class="weight" x="918" y="242">w = 2</text>
+  <circle class="node" cx="782" cy="257" r="28"/><circle class="node" cx="1054" cy="257" r="28"/>
+  <circle class="node" cx="916" cy="393" r="28"/><circle class="node" cx="1054" cy="510" r="28"/>
+  <circle class="node" cx="782" cy="510" r="28"/>
+  <text class="letter" x="782" y="257">A</text><text class="letter" x="1054" y="257">B</text>
+  <text class="letter" x="916" y="393">C</text><text class="letter" x="1054" y="510">D</text>
+  <text class="letter" x="782" y="510">E</text>
+  <text class="small" x="817" y="517">isolate</text>
+  <text class="footer" x="710" y="605">5 nodes; 4 pairs; total edge weight 5</text>
+
+  <text class="small" x="29" y="659">P4 remains visible on the left. It creates no observed coauthor pair, so E has no edge on the right.</text>
+</svg>
