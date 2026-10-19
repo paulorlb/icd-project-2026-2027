@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "icd-project"
+version = "0.1.0"
+description = "Reproducible GOVCOPP publications analysis for ICD"
+requires-python = ">=3.12"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,25 @@
+# Python and Jupyter
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+/.verify_deps/
+
+# Local environments and secrets
+.venv/
+.env
+.env.*
+
+# Supplied raw data: redistribution rights have not been established.
+data/raw/*.csv
+notebooks/aulas/
+
+# Generated data and results
+data/processed/*
+!data/processed/.gitkeep
+outputs/figures/*
+!outputs/figures/.gitkeep
+outputs/tables/*
+!outputs/tables/.gitkeep
+outputs/coauthorship*/
