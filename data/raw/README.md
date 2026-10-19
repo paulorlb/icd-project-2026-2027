@@ -126,7 +126,17 @@ A publication may be associated with one or more GOVCOPP researchers.
 | Publication–researcher relationships | 4,363 |
 | Source indicated in the authorship file | Scopus |
 | Researcher categories | integrado; colaborador |
-| Formal groups represented | CIS; TD; SAD; PI2; PI3 |
+| Formal groups represented | CIS; TD; SAD; PI2 |
+
+### Documented group correction
+
+On 2026-10-19, the four authorship rows for researcher `R093` were corrected from `PI3` to `PI2`. The corresponding `govcopp_groups` fields in `publications_2020_2026.csv` and both the group and author-group fields in the optional integrated file were corrected for the same four publications. The two files used for W06 now match the corrected teaching files byte for byte. Publication and researcher identifiers, titles, and authorship links did not change.
+
+| File | SHA-256 before correction | SHA-256 after correction |
+|---|---|---|
+| `authorship_2020_2026.csv` | `512f30215fe028935fc599667a6632e017f99f6d9f77f2892258e7f555c66338` | `41a9e5fbc512d3d7e015e4d0dc7beed6daa3d2d15049e94bab90d582d3604d73` |
+| `publications_2020_2026.csv` | `badca2d7219a3f5b14a2c9f6f7b100a4c094ffe0dcbe6431a966a0471c3b7362` | `60b1ab3f6ce49d7edcb65506f5adffb9c3f279f3ea1065e4240b3744a87961be` |
+| `publications_authors_2020_2026.csv` | `526c9e6e3b3861f14ecaa6528a0eca5baf2c129c252b136df0b2f5dc2dbe538c` | `ca6b83deaaee435ea329e882897c9bdbc157f5cf05d512c5d9ef48da2c363b8d` |
 
 ---
 

@@ -13,7 +13,6 @@ __pycache__/
 
 # Supplied raw data: redistribution rights have not been established.
 data/raw/*.csv
-notebooks/aulas/
 
 # Generated data and results
 data/processed/*
