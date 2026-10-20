@@ -12,6 +12,8 @@ __pycache__/
 .env.*
 
 # Supplied raw data: redistribution rights have not been established.
+data/processed/*
+data/raw/*
 data/raw/*.csv
 
 # Generated data and results

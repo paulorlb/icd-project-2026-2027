@@ -74,7 +74,14 @@ def main() -> int:
             cell["outputs"] = []
 
     metadata = notebook.setdefault("metadata", {})
-    metadata.setdefault("kernelspec", {})["display_name"] = "Python 3 (icd-project)"
+    kernelspec = metadata.setdefault("kernelspec", {})
+    kernelspec.update(
+        {
+            "display_name": "Python 3 (icd-project)",
+            "language": "python",
+            "name": "icd-project",
+        }
+    )
     course_metadata = metadata.setdefault("mtad", {})
     course_metadata["version"] = "group"
     course_metadata["derived_from"] = source_path.relative_to(PROJECT_ROOT).as_posix()

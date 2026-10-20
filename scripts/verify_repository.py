@@ -34,6 +34,8 @@ REQUIRED_PATHS = (
     "docs/evidence_register.md",
     "docs/contributions.csv",
     "docs/ai_use_log.csv",
+    "docs/git_github_guide.md",
+    "docs/git_github_teacher_setup.md",
     "reports/README.md",
     "scripts/start_group_notebook.py",
     "scripts/verify_repository.py",
@@ -166,11 +168,19 @@ def main() -> int:
             results.pass_("lesson notebook writes under outputs/lessons/w06")
         else:
             results.fail("lesson notebook output directory is not outputs/lessons/w06")
-        kernel = notebook.get("metadata", {}).get("kernelspec", {}).get("display_name", "")
-        if "icd-project" in kernel:
-            results.pass_(f"notebook kernel matches the project environment: {kernel}")
+        kernelspec = notebook.get("metadata", {}).get("kernelspec", {})
+        kernel_display = kernelspec.get("display_name", "")
+        kernel_name = kernelspec.get("name", "")
+        if "icd-project" in kernel_display and kernel_name == "icd-project":
+            results.pass_(
+                "notebook kernel matches the project environment: "
+                f"{kernel_display} ({kernel_name})"
+            )
         else:
-            results.warn(f"select the icd-project kernel before Run All; notebook currently says {kernel!r}")
+            results.warn(
+                "select the icd-project kernel before Run All; notebook currently says "
+                f"display_name={kernel_display!r}, name={kernel_name!r}"
+            )
 
     for filename, expected_hash in EXPECTED_DATA.items():
         path = ROOT / "data" / "raw" / filename
@@ -218,9 +228,8 @@ def main() -> int:
         "## Run order",
         "## Generated and reference outputs",
         "## Project records",
-        "## Git synchronization",
+        "## User guides",
         "## Verification gates",
-        "## Clean-clone test",
     )
     missing_headings = [heading for heading in required_headings if heading not in readme]
     if missing_headings:
