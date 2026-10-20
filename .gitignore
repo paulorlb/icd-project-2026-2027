@@ -17,4 +17,5 @@ data/raw/*.csv
 # Generated data and results
 data/processed/*
 !data/processed/.gitkeep
-outputs/w*/
+outputs/**
+!outputs/.gitkeep
