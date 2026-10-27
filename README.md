@@ -1,3 +1,21 @@
+
+<div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+  <!-- Left Column: Image -->
+  <div style="flex: 1; text-align: center;">
+    <img src="https://i0.wp.com/cdcs.web.ua.pt/wp-content/uploads/2022/05/cropped-cropped-Picture13-1.png?w=968" width="370" height="200" style="display: block; margin: auto;"/>
+  </div>
+
+  <!-- Right Column: Text -->
+  <div style="flex: 1; text-align: left;">
+    <div><strong style="color: #4F5B63; font-size: 1.5em;">Master in Data Science for Social Sciences</strong></div>
+    <div><strong style="color: #4F5B63; font-size: 1.2em;">University of Aveiro</strong></div>
+    <p style="color: #46627F; font-weight: bold; font-style: italic;">Introduction to Data Science - 2026/2027</p>
+    <p style="color: #4F5B63;">João Lourenço Marques</p>
+    <p style="color: #4F5B63;">Paulo Batista</p>
+  </div>
+</div>
+
+
 # Introduction to Data Science project repository
 
 This is the reference project structure for the Introduction to Data Science course. It combines
